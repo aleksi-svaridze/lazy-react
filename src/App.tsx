@@ -1,6 +1,8 @@
 import { useMemo, useState, useTransition, type ChangeEvent } from "react";
 import type { IPotos } from "./interfaces/potos.interfece";
 import potos from "./data/Potos";
+import ShowData from "./components/ShowData";
+import Form from "./components/Form";
 
 function App() {
   const [isPending, startTransition] = useTransition();
@@ -31,16 +33,18 @@ function App() {
           onChange={(e) => handleChange(e)}
         />
         <div>
-          {letFilterPotoData.map((item) => (
-            <div className="border-b mb-4 flex" key={item.id}>
-              <img src={item.thumbnailUrl} className="w-28 h-28" />
-              <p>{item.title}</p>
-            </div>
-          ))}
+          {/* {letFilterPotoData.map((poto, id) => (
+            <ShowData
+              title={poto.title}
+              key={id}
+              thumbnailUrl={poto.thumbnailUrl}
+            />
+          ))} */}
         </div>
       </section>
       <section className="w-1/3">
-        <h1 className="font-bold text-4xl mb-10">Form</h1>
+        <h1 className="font-bold text-4xl">Form</h1>
+        <Form />
       </section>
     </main>
   );
