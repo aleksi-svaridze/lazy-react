@@ -23,8 +23,8 @@ function App() {
   }, [searchInputvalue]);
 
   return (
-    <main className="flex px-10 gap-x-10">
-      <section className="w-2/3">
+    <main className="flex flex-col xl:flex-row h-screen">
+      <section className="w-full xl:w-2/3 bg-red-300  p-10 order-2">
         <h1 className="font-bold text-4xl">Content</h1>
         <input
           className="my-8 border outline-none w-full p-4"
@@ -42,7 +42,7 @@ function App() {
           ))} */}
         </div>
       </section>
-      <section className="w-1/3">
+      <section className="w-full xl:w-1/3 bg-green-300 p-10 order-1">
         <h1 className="font-bold text-4xl">Form</h1>
         <Form />
       </section>

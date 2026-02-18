@@ -19,10 +19,10 @@ function Form(): JSX.Element {
           name="email"
           value={emailValue}
           onChange={(e) => setEmailValue(e.target.value)}
-          className="border rounded"
+          className="border rounded p-3"
           required
         />
-        <button type="submit" className="border px-2 rounded">
+        <button type="submit" className="border p-3 rounded">
           Submit
         </button>
       </div>
